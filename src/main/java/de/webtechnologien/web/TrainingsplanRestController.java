@@ -1,6 +1,6 @@
-package de.Webtechnologien.web;
+package de.webtechnologien.web;
 
-import de.Webtechnologien.web.api.Trainingsplan;
+import de.webtechnologien.web.api.Trainingsplan;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

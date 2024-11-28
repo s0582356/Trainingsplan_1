@@ -1,4 +1,4 @@
-package de.Webtechnologien;
+package de.webtechnologien;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

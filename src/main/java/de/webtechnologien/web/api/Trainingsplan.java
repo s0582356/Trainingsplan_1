@@ -1,4 +1,4 @@
-package de.Webtechnologien.web.api;
+package de.webtechnologien.web.api;
 
 public class Trainingsplan {
 
