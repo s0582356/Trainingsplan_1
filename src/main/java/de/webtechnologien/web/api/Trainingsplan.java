@@ -1,7 +1,16 @@
 package de.webtechnologien.web.api;
 
-public class Trainingsplan {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.NoArgsConstructor;
 
+@Entity
+@NoArgsConstructor
+public class Trainingsplan {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int uebungNr;
     private String uebungName;
     private int anzahlSaetze;
@@ -15,6 +24,8 @@ public class Trainingsplan {
         this.anzahlSaetze = anzahlSaetze;
         this.anzahlWiederholungen = anzahlWiederholungen;
     }
+
+
 
     public int getNr() {
         return uebungNr;
