@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/Trainingsplan")
 public class TrainingsplanRestController {
 
     private final TrainingsplanService trainingsplanService;
@@ -19,19 +20,19 @@ public class TrainingsplanRestController {
         this.trainingsplanService = trainingsplanService;
     }
 
-    @GetMapping(path = "/api/Trainingsplan")
-    public ResponseEntity<List<Trainingsplan>> getTrainingsplan() {
-        // erstelle eine Liste von Trainingsplänen
-        List<Trainingsplan> trainingsplanliste = new ArrayList<>();
-
-        // Füge Trainingspläne zur Liste hinzu
-        trainingsplanliste.add(new Trainingsplan(1, "Bankdrücken", 3, 10));
-        trainingsplanliste.add(new Trainingsplan(2, "Kniebeugen", 4, 12));
-        trainingsplanliste.add(new Trainingsplan(3, "Kreuzheben", 3, 8));
-        trainingsplanliste.add(new Trainingsplan(4, "Schulterdrücken", 3, 10));
-
-        return ResponseEntity.ok(trainingsplanliste);
-    }
+//    @GetMapping
+//    public ResponseEntity<List<Trainingsplan>> getTrainingsplan() {
+//        // erstelle eine Liste von Trainingsplänen
+//        List<Trainingsplan> trainingsplanliste = new ArrayList<>();
+//
+//        // Füge Trainingspläne zur Liste hinzu
+//        trainingsplanliste.add(new Trainingsplan(1, "Bankdrücken", 3, 10));
+//        trainingsplanliste.add(new Trainingsplan(2, "Kniebeugen", 4, 12));
+//        trainingsplanliste.add(new Trainingsplan(3, "Kreuzheben", 3, 8));
+//        trainingsplanliste.add(new Trainingsplan(4, "Schulterdrücken", 3, 10));
+//
+//        return ResponseEntity.ok(trainingsplanliste);
+//    }
 
     @GetMapping
     public ResponseEntity<Iterable<Trainingsplan>> getTrainingsplans() {
